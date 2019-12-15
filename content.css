@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+}
+
+header, main, section, pre {
+    margin-bottom: 2rem;
+    position: relative;
+    white-space: pre-wrap;
+}
+
+::before, ::after {
+    position: relative;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    line-height: 1.5;
+    max-width: 700px;
+    padding: 2rem 2rem 2rem 8rem;
+}
+
+/* Header */
+header {
+    font-size: 4rem;
+    line-height: 1.2;
+}
+header::before {
+    background: url('hero.svg') no-repeat center;
+    background-size: cover;
+    content:'';
+    display: inline-block;
+    height: 80px;
+    width: 80px;
+}
+header::after {
+    content: 'Super Pseudo';
+    font-weight: bold;
+}
+
+/* Section Headers */
+section:before {
+    display: block;
+    font-size: 2rem;
+}
+
+/* Main */
+main::before {
+    content: 'This web page has no real HTML content. What you\'re reading right now is just CSS. Every heading, paragraph and code snippet is being rendered via pseudo selector elements. Crazy, right?\A\A';
+}
+
+/* Section 1 */
+section:first-of-type:before {
+    content:'Quick breakdown';
+}
+section:first-of-type:after {
+    content:'This demo page uses no direct HTML text for it\'s content. A simple set of default element types are used (header, main, section, etc.) and then pseudo selectors are applied to them. Inspect this page to take a look at all the empty HTML tags and corresponding CSS.';
+}
+
+/* Section 2 */
+section:nth-of-type(2):before {
+    content:'Should you use this?'
+}
+section:nth-of-type(2):after {
+    content:"Absolutely not. This is purely a fun experiment to showcase how dangerous CSS can truly be when given the opportunity. Let\'s breakdown some key items that make this implementation pretty terrible:\A\A - Text is not selectable or easily translatable\A - No support for text formatting\A - No content will show if CSS fails to load\A - Not accessible or practical for end-users\A - Content is not searchable in the browser\A - Overall, just a terrible idea";
+}
+
+/* Section 3 */
+section:nth-of-type(3):before {
+    content:'Then why does this exist?'
+}
+section:nth-of-type(3):after {
+    content:'The project was created out of pure love♥ for the web. It\'s stupid, impractical and borderline damaging to the structure of everyday website development. But it sure was fun to make!\A\A Check out the final HTML output below and see how empty it really is:';
+}
+
+/* Code */
+pre {
+    background: #f9f9f9;
+    display: block;
+    padding: 1rem;
+}
+pre:first-of-type::before {
+    content:'<body>\A<header></header>\A<main></main>\A<section></section>\A<section></section>\A<section></section>\A<pre></pre>\A</body>'
+}
+
+footer {
+    border-top: 1px solid #f9f9f9;
+    margin-top: 3rem;
+    padding-top: 2rem;
+}
+
+@media(max-width:900px) {
+    body {
+        padding: 1rem;
+    }
+    header::before {
+        display: block;
+    }
+}
