@@ -53,7 +53,7 @@ section:first-of-type:before {
     content:'Quick breakdown';
 }
 section:first-of-type:after {
-    content:'This demo page uses no direct HTML text for it\'s content. A simple set of default element types are used (header, main, section, etc.) and then pseudo selectors are applied to them. Inspect this page to take a look at all the empty HTML tags and corresponding CSS.';
+    content:'This demo page uses no direct HTML text for any content (excluding the footer). A simple set of default element types are used (header, main, section, etc.) and then pseudo selectors are applied to them. Inspect this page to take a look at all the empty HTML tags and corresponding CSS.';
 }
 
 /* Section 2 */
